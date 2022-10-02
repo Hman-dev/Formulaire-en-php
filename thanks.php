@@ -4,12 +4,12 @@
 //var_dump($_POST);
 
 
-if(isset($_POST['user_name'])
-&& isset($_POST['user_firstname']) 
-&& isset($_POST['user_email']) 
-&& isset($_POST['phone'])
-&& isset($_POST['theme']) 
-&&isset($_POST['user_message'])
+if(!empty($_POST['user_name'])
+&& !empty($_POST['user_firstname']) 
+&& !empty($_POST['user_email']) 
+&& !empty($_POST['phone'])
+&& !empty($_POST['theme']) 
+&& !empty($_POST['user_message'])
 )
 {
    
@@ -26,6 +26,8 @@ if(isset($_POST['user_name'])
     $message</p>";
     
 
+}else{
+    echo "Veuillez rentrer tous les champs pour valider votre formulaire";
 }
 
 
